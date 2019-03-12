@@ -1,0 +1,19 @@
+ru:
+  Home: "Главная"
+  User: "Пользователь"
+  Saves: "Сохраненные посты"
+  Sign up: "Регистрация"
+  Logout: "Выйти"
+  Login: "Войти"
+  Hello: "Привет"
+  My_profile: "Мой профиль"
+  New_exercise: "Новый пост"
+  User_settings: "Настройки пользователя"
+
+  exercises:
+    show:
+      Total_comments: "Всего комментариев"
+  comments:
+    form:
+      Leave_comment: "Оставить комментарий"
+      Your_comment: "Ваш комментарий"

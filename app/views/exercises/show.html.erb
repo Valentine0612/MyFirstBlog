@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<div class="card">
+  <div class="card-header">
+    <%= @exercise.title %>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= @exercise.description %></p>
+  </div>
+</div>
+<h4><%= t '.Total_comments' %>: <%= @exercise.comments.count %></h4>
+<%= render @exercise.comments %>
+<div>
+  <%= render 'comments/form' %>
+</div>

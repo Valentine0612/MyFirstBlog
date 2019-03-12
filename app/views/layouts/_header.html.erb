@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="<%= root_path %>">My Blog</a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="<%= feed_path %>"><%= t(:Home)%> <span class="sr-only">(current)</span></a>
+          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <a href="<%= edit_user_registration_path %>" class="nav-link"><%= t(:User) %></a>
+            </li>
+          <% end %>
+          </ul>
+          <div class="btn-group" role="group">
+              <%= link_to('RU', current_path(locale: 'ru'), class: "btn btn-outline-light") %>
+              <%= link_to('EN', current_path(locale: 'en'), class: "btn btn-outline-light") %>
+          </div>
+          <% if user_signed_in? %>
+              <%= link_to(t(:Logout), destroy_user_session_path, method: :delete, class: "btn btn-light") %>
+        <% else %>
+      <div class="btn-group" role="group">
+          <%= link_to(t(:Login), new_user_session_path, class: "btn btn-light") %>
+          <%= link_to(t(:'Sign up'), new_registration_path(resource_name), class: "btn btn-light") %>
+      </div>
+    <%end%>
+  </div>
+</nav>

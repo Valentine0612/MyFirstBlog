@@ -1,0 +1,4 @@
+<%= bootstrap_form_for([@exercise, @exercise.comments.build]) do |f| %>
+  <%= f.text_area :comment, label: t('.Your_comment') %>
+  <%= f.submit t ".Leave_comment" %>
+<% end %>
